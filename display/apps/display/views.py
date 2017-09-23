@@ -7,7 +7,7 @@ from time import gmtime, strftime
 # Create your views here.
 def index(request):
     context = {
-        "time": datetime.now()
+        "time": datetime.now().strftime("%Y-%m-%d %H:%M %p")
         #"Time":strftime("%Y-%m-%d %H:%M %p", gmtime())
     }
     return render(request,'display/page.html', context)
